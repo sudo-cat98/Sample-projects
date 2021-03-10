@@ -1,0 +1,236 @@
+@import 'navbar';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+//  HERO-SECTION
+
+.hero {
+    background: $light;
+
+    &-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 100%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        height: 100%;
+    }
+
+    &-left {
+        width: 100%;
+        line-height: 1.2;
+      
+
+
+        @include tablet {
+            padding: 5rem 0;
+        }
+
+        @include mobile{
+            line-height: 1.5;
+        }
+    }
+    &-left h1{
+        font-size: 4rem;
+        color: $lime;
+    
+        @include mobile{
+            font-size: 1.5rem;
+        }
+    }
+    &-left h1 .hero-span{
+        font-size: 3rem;
+        color: $dark;
+    
+        @include mobile{
+            font-size: 2rem;
+        }
+    }
+    
+    &-left p{
+        margin-top: 1rem;
+        color: $dark;
+        font-size: 2rem;
+        font-weight: 700;
+        
+    
+        @include mobile{
+            font-size: 1.5rem;
+        }
+    }
+ 
+    &-btn{
+        font-size: 1rem;
+        background: $lime;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 4px;
+        color: $light;
+        margin-top: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+    &-btn a{
+        position: relative;
+        z-index: 2;
+        color: $light;
+        text-decoration: none;
+    }
+    &-btn:after{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $orangeRed;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+    }
+    &-btn:hover:after{
+        width: 100%;
+
+    }
+    &-right{
+        text-align: center;
+        
+    }
+    &-img{
+        width: 29vw;
+        @include tablet {
+            margin-left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        @include mobile{
+            margin-left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+}
+
+//ABOUT SECTION
+.about{
+    background: $light;
+    &-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 100%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-top: 100px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        height: 100%;
+    }
+    &-left {
+       
+        width: 100%;
+        line-height: 1.2;
+      
+       
+
+        @include tablet {
+            padding: 5rem 0;
+        }
+
+        @include mobile{
+            line-height: 1.5;
+        }
+    }
+
+    &-left h1{
+        
+        text-align: center;
+
+    }
+    //left image
+    &-img{
+
+        margin-top: -1.5em;
+        width: 10vw;
+  
+  
+        @include tablet {
+
+            
+            margin-left: 5rem;
+            padding-top: 5em;
+            width: 50%;
+        }
+
+        @include mobile{
+            margin-left: 5rem;
+            width: 50%;
+     
+        }
+    }
+    //RIGHT SIDE
+    &-right {
+        padding-top: 7em;
+        width: 100%;
+      
+
+
+        @include tablet {
+            padding: 5rem 0;
+        }
+
+        @include mobile{
+            line-height: 1.5;
+        }
+    }
+    ol{
+        list-style: none;
+        color: #e0501b;
+    }
+    
+    ol li{
+        font-size: 34px;
+        position: relative;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ebebeb;
+    }
+    
+    li p{
+        font-size: 16px;
+        color: #000;
+        padding-left: 60px;
+        line-height: 30px;
+        opacity: 0.6;
+    }
+    
+    li span{
+        position: absolute;
+        line-height: 25px;
+        font-weight: 600;
+    }
+}
+}
